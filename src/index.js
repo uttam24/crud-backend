@@ -3,7 +3,7 @@ import cors from 'cors'
 import clientRoute from './routes/clientRoute.js'
 
 const app = express();
-const port = 'https://crud-backend-orcin.vercel.app/';
+const port = process.env.PORT || 3200;
 app.use(cors())
 app.use(express.json())
 app.use('/api', clientRoute)
